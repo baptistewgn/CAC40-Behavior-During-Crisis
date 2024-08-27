@@ -61,5 +61,5 @@ colnames(compDailyPrices) <- comp
 
 # Export data for repeatability 
 
-saveRDS(cac40DailyPrices, file = "CAC40_index_daily_Prices_2008_2022.rds")
-saveRDS(compDailyPrices, file = "CAC40_components_daily_Prices_2008_2022.rds")
+saveRDS(cac40DailyPrices, file = "../database/CAC40_index_daily_Prices_2008_2022.rds")
+saveRDS(compDailyPrices, file = "../database/CAC40_components_daily_Prices_2008_2022.rds")
