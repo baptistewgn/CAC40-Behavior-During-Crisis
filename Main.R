@@ -15,10 +15,10 @@
 # ========================================================
 
 # Load Data from 1_data_collection.R
-cac40DailyPrices <- readRDS("CAC40_index_daily_Prices_2008_2022.rds")
-compDailyPrices <- readRDS("CAC40_components_daily_Prices_2008_2022.rds")
+cac40DailyPrices <- readRDS("../database/CAC40_index_daily_Prices_2008_2022.rds")
+compDailyPrices <- readRDS("../database/CAC40_components_daily_Prices_2008_2022.rds")
 
 # Run the remaining code
-source("2_data_processing.R")
-source("3_tail_index_computation.R")
-source("4_data_visualisation.R")
+source("../scripts-R/2_data_processing.R")
+source("../scripts-R/3_tail_index_computation.R")
+source("../scripts-R/4_data_visualisation.R")
