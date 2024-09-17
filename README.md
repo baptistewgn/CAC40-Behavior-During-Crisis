@@ -4,8 +4,8 @@ This repository contains code and data for a comparative study of French stocks'
 
 ## Author and Supervisor
 
-- **Author:** Baptiste WAIGNON
-- **Supervisor:** Marcel ALOY
+- **Author:** Baptiste WAIGNON - Student (Aix-Marseille Université)
+- **Supervisor:** Marcel ALOY - Lecturer (Aix-Marseille Université)
 
 ## Project Overview
 
