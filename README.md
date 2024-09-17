@@ -4,8 +4,8 @@ This repository contains code and data for a comparative study of French stocks'
 
 ## Author and Supervisor
 
-- **Author:** Baptiste WAIGNON
-- **Supervisor:** Marcel ALOY
+- **Author:** Baptiste WAIGNON - Student (Aix-Marseille Université)
+- **Supervisor:** Marcel ALOY - Lecturer (Aix-Marseille Université)
 
 ## Project Overview
 
@@ -26,16 +26,12 @@ The project investigates the impact of crises on the return distributions of Fre
 ## How to Use
 
 1. **Prepare the Data:**
-   - Ensure that the data files `CAC40_index_daily_Prices_2008_2022.rds` and `CAC40_components_daily_Prices_2008_2022.rds` are present in the working directory. These files should be the result of running `1_data_collection.R`.
+   - Ensure that the data files `CAC40_index_daily_Prices_2008_2022.rds` and `CAC40_components_daily_Prices_2008_2022.rds` are present in the working directory. These files result from running `1_data_collection.R` and are already in the current repository.
 
 2. **Run the Analysis:**
    - Execute the `main.R` script to perform the following actions:
      - Load the pre-collected data.
      - Source and run the remaining scripts for data processing, tail index computation, and visualization.
-
-   ```r
-   source("main.R")
-   ```
 
    This script will sequentially run the other scripts (`2_data_processing.R`, `3_tail_index_computation.R`, `4_data_visualisation.R`).
 
