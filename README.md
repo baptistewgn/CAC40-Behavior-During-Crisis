@@ -13,15 +13,16 @@ The project investigates the impact of crises on the return distributions of Fre
 
 ## Repository Structure
 
-1. **`1_data_collection.R`**: Script for collecting and cleaning data. **Note:** This script is only needed to be run if you are collecting new data. The data has already been collected and exported, so you do not need to run this script again.
+1. **`1_data_collection.R`**: Script for collecting and cleaning data.
+**Note:** This script is only needed to be run if you are collecting new data. The data has already been collected and exported, so you do not need to run this script again.
 
-2. **`2_data_processing.R`**: Script for processing the data, including return calculations and crisis period analysis.
+3. **`2_data_processing.R`**: Script for processing the data, including return calculations and crisis period analysis.
 
-3. **`3_tail_index_computation.R`**: Script for computing the tail index using the Weighted Least Squares (WLS) estimator.
+4. **`3_tail_index_computation.R`**: Script for computing the tail index using the Weighted Least Squares (WLS) estimator.
 
-4. **`4_data_visualisation.R`**: Script for visualizing the results, including plots of returns, distributions, volatility, and tail indices.
+5. **`4_data_visualisation.R`**: Script for visualizing the results, including plots of returns, distributions, volatility, and tail indices.
 
-5. **`main.R`**: Main script to run all parts of the analysis.
+6. **`main.R`**: Main script to run all parts of the analysis.
 
 ## How to Use
 
