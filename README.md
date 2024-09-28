@@ -13,6 +13,8 @@ The project investigates the impact of crises on the return distributions of Fre
 
 ## Repository Structure
 
+All scripts are available in the [scripts](./scripts) folder.
+
 1. **`1_data_collection.R`**: Script for collecting and cleaning data.
 **Note:** This script is only needed to be run if you are collecting new data. The data has already been collected and exported, so you do not need to run this script again.
 
@@ -23,6 +25,8 @@ The project investigates the impact of crises on the return distributions of Fre
 5. **`4_data_visualisation.R`**: Script for visualizing the results, including plots of returns, distributions, volatility, and tail indices.
 
 6. **`main.R`**: Main script to run all parts of the analysis.
+
+7. **`Pareto_Assumption.ipynb`**: Notebook explaining why extreme negative returns can be considered to follow a Pareto distribution.
 
 ## How to Use
 
