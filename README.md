@@ -1,6 +1,6 @@
 # Analyzing the Behavior of French Stocks During Crises
 
-This repository contains code and data for a comparative study of French stocks' return distributions from 2007 to 2022. The study focuses on analyzing the behavior of the CAC40 Index and its components during various financial crises using the tail index.
+This repository contains code and data for a comparative study of French stocks' return distributions from 2007 to 2022. The study focuses on analyzing the behavior of the CAC40 Index and its components during various financial crises using the tail index. This project was developed as part of my master's dissertation in Financial Risk Management at Université d'Aix-Marseille, France.
 
 ## Author and Supervisor
 
