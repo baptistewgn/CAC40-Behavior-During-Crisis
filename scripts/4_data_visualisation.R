@@ -45,21 +45,16 @@ print(autoplot(cac40DailyReturns^2, facets = NULL) +
   ylab("Squared Returns") +
   xlab("Date"))
 
-acf(cac40DailyReturns, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
-acf(cac40DailyReturns^2, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
-acf(referencePeriodCAC40, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
+plot_acf <- function(x) {
+  acf(x, lag.max = 20, type = "correlation",
+      plot = TRUE, na.action = na.pass, demean = TRUE)
+}
 
-acf(period1CAC40, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
-acf(period2CAC40, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
-acf(period3CAC40, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
-acf(period4CAC40, lag.max = 20, 
-    type = "correlation", plot = TRUE, na.action = na.pass, demean = TRUE)
+invisible(lapply(
+  list(cac40DailyReturns, cac40DailyReturns^2, referencePeriodCAC40,
+       period1CAC40, period2CAC40, period3CAC40, period4CAC40),
+  plot_acf
+))
 
 # Tail Indices by Sector
 for (sector in names(sectorTables)) {

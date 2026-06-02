@@ -17,69 +17,26 @@ EndDate   <- as.Date("2022-12-31")
 
 # Tail Index (xi) using Weighted Least Square Estimator
 
-  # Reference period
-referencePeriodxi <- list()
-for (tickers in names(referencePeriodNeg)) {
-  alpha <- alpha_wls(referencePeriodNeg[[tickers]])
-  for (item in names(alpha)) {
-    alpha[[item]] <- 1 / alpha[[item]]
-  }
-  referencePeriodxi[[tickers]] <- alpha
+compute_xi <- function(neg_list) {
+  lapply(neg_list, function(returns) {
+    alpha <- alpha_wls(returns)
+    lapply(alpha, function(x) 1 / x)
+  })
 }
+
+referencePeriodxi <- compute_xi(referencePeriodNeg)
+period1xi         <- compute_xi(period1Neg)
+period2xi         <- compute_xi(period2Neg)
+period3xi         <- compute_xi(period3Neg)
+period4xi         <- compute_xi(period4Neg)
 
   # Benchmark
 cac40Periods <- list(period1CAC40, period2CAC40, period3CAC40, period4CAC40, referencePeriodCAC40)
-cac40xi <- list()
-
-for (i in seq_along(cac40Periods)) {
-  neg <- cac40Periods[[i]][cac40Periods[[i]] < 0]
-  abs_neg <- abs(neg)
-  alpha <- alpha_wls(abs_neg)
-  for (item in names(alpha)) {
-    alpha[[item]] <- 1 / alpha[[item]]
-  }
-  cac40xi[[i]] <- alpha
-}
-
-  # Period (1)
-period1xi <- list()
-for (tickers in names(period1Neg)) {
-  alpha <- alpha_wls(period1Neg[[tickers]])
-  for (item in names(alpha)) {
-    alpha[[item]] <- 1 / alpha[[item]]
-  }
-  period1xi[[tickers]] <- alpha
-}
-
-  # Period (2)
-period2xi <- list()
-for (tickers in names(period2Neg)) {
-  alpha <- alpha_wls(period2Neg[[tickers]])
-  for (item in names(alpha)) {
-    alpha[[item]] <- 1 / alpha[[item]]
-  }
-  period2xi[[tickers]] <- alpha
-}
-
-  # Period (3)
-period3xi <- list()
-for (tickers in names(period3Neg)) {
-  alpha <- alpha_wls(period3Neg[[tickers]])
-  for (item in names(alpha)) {
-    alpha[[item]] <- 1 / alpha[[item]]
-  }
-  period3xi[[tickers]] <- alpha
-}
-
-  # Period (4)
-period4xi <- list()
-for (tickers in names(period4Neg)) {
-  alpha <- alpha_wls(period4Neg[[tickers]])
-  for (item in names(alpha)) {
-    alpha[[item]] <- 1 / alpha[[item]]
-  }
-  period4xi[[tickers]] <- alpha
-}
+cac40xi <- lapply(cac40Periods, function(period) {
+  abs_neg <- abs(period[period < 0])
+  alpha   <- alpha_wls(abs_neg)
+  lapply(alpha, function(x) 1 / x)
+})
 
 # Result by Category (ICB Classification)
 
