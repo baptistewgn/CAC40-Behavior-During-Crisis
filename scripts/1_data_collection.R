@@ -44,12 +44,12 @@ for (ticker in comp) {
 
     # URW missing data from src 'yahoo finance'
     # Data collected from investing.com as URW.csv
-URW <- na.locf(as.xts(read_excel(path = "/Users/bwgn/Library/Mobile Documents/com~apple~CloudDocs/Cours/M2 Financial Management Risk/Master Thesis/data/URW.xlsx")))
+URW <- na.locf(as.xts(read_excel(path = "../database/URW.xlsx")))
 compDailyPrices  <- cbind(compDailyPrices, URW)
 
     # STLAP issue during importation from 'yahoo finance'
     # manual extraction form yahoo finance
-STLAP <- na.locf(as.xts(read_excel(path = "/Users/bwgn/Library/Mobile Documents/com~apple~CloudDocs/Cours/M2 Financial Management Risk/Master Thesis/data/STLAP.PA.xlsx")))
+STLAP <- na.locf(as.xts(read_excel(path = "../database/STLAP.PA.xlsx")))
 compDailyPrices  <- cbind(compDailyPrices, STLAP)
 
 comp <- c("AI","MT","MC","OR","RMS","KER","ML","PUB",
